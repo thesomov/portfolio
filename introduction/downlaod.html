@@ -6,21 +6,13 @@
 <body>
   <script>
     function downloadVideo() {
-      fetch('https://thesomov.com/Introduction.mp4')
-        .then(response => response.blob())
-        .then(blob => {
-          var link = document.createElement('a');
-          link.href = window.URL.createObjectURL(blob);
-          link.download = 'Introduction.mp4';
-
-          link.style.display = 'none';
-          document.body.appendChild(link);
-
-          link.click();
-
-          document.body.removeChild(link);
-        })
-        .catch(error => console.error('Ошибка загрузки видео:', error));
+      var link = document.createElement('a');
+      link.href = 'https://thesomov.com/Introduction.mp4';
+      link.style.display = 'none';
+      link.download = 'Introduction.mp4';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
 
     window.onload = function() {
