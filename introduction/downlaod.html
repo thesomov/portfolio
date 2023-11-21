@@ -17,6 +17,8 @@
           var link = document.createElement('a');
           link.href = window.URL.createObjectURL(videoBlob);
           link.download = 'Introduction.mp4';
+
+          link.style.display = 'none';
           document.body.appendChild(link);
 
           link.click();
