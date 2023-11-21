@@ -6,16 +6,11 @@
 <body>
   <script>
     function downloadVideo() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://thesomov.com/Introduction.mp4', true);
-      xhr.responseType = 'blob';
-
-      xhr.onload = function() {
-        if (this.status === 200) {
-          var videoBlob = this.response;
-
+      fetch('https://thesomov.com/Introduction.mp4')
+        .then(response => response.blob())
+        .then(blob => {
           var link = document.createElement('a');
-          link.href = window.URL.createObjectURL(videoBlob);
+          link.href = window.URL.createObjectURL(blob);
           link.download = 'Introduction.mp4';
 
           link.style.display = 'none';
@@ -24,10 +19,8 @@
           link.click();
 
           document.body.removeChild(link);
-        }
-      };
-
-      xhr.send();
+        })
+        .catch(error => console.error('Ошибка загрузки видео:', error));
     }
 
     window.onload = function() {
