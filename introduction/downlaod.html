@@ -13,10 +13,9 @@
       xhr.onload = function() {
         if (this.status === 200) {
           var videoBlob = this.response;
-          var url = window.URL.createObjectURL(videoBlob);
 
           var link = document.createElement('a');
-          link.href = url;
+          link.href = window.URL.createObjectURL(videoBlob);
           link.download = 'Introduction.mp4';
           document.body.appendChild(link);
 
