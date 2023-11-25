@@ -2477,7 +2477,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: rgba(73, 191, 157, 0.1);
+			background-color: #eeeeee;
 			border-color: #5f5f5f;
 			color: #353535 !important;
 		}
