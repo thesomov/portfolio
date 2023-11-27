@@ -119,8 +119,30 @@
 						</div>
 					
 						<ul class="actions">
-							<li><a href="Portfolio.rar" class="button" download>Download Portfolio</a></li>
-						</ul><hr>
+ 							 <li><a href="Portfolio.rar" class="button" id="downloadButton">Download Portfolio</a></li>
+						</ul>
+
+					<script>
+						function delayedPreload(event) {
+    						event.preventDefault(); // Отмена стандартного поведения ссылки
+
+    						setTimeout(function() {
+      						var preloadLink = document.createElement('link');
+      						preloadLink.rel = 'preload';
+      						preloadLink.href = 'Portfolio.rar'; // Здесь указывается путь к вашему файлу
+      						preloadLink.as = 'archive'; // Указание типа файла, можно использовать 'archive'
+
+      						document.head.appendChild(preloadLink);
+      
+      						// Затем запускается скачивание файла после предзагрузки
+      						window.location.href = event.target.href;
+    						}, 3000); // Задержка в миллисекундах (здесь 3000 миллисекунд или 3 секунды)
+  						}
+
+  						// Получение ссылки на кнопку скачивания и добавление обработчика события click
+  						var downloadButton = document.getElementById('downloadButton');
+  						downloadButton.addEventListener('click', delayedPreload);
+					</script><hr>
 				<!-- Three -->
 					<section id="contacts">
 						<h2>Wanna say hi? Please do enjoy:</h2>
