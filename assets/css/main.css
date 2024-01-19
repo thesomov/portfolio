@@ -83,7 +83,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: url("../../images/bg2.png") no-repeat;
+		background-size: cover;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -98,7 +99,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #222222;
+		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -117,7 +118,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #353535 !important;
+			color: #ffdefd !important;
 			text-decoration: none;
 		}
 
@@ -135,7 +136,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #222222;
+		color: #ffffff;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -2450,8 +2451,8 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #222222 !important;
+		border: solid 3px #7c00c3;
+		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2469,8 +2470,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #5f5f5f;
-			color: #353535 !important;
+			border-color: #ffffff;
+			color: #ffffff !important;
 		}
 
 		input[type="submit"]:active,
@@ -2598,10 +2599,10 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.webp"), url("../../images/bg.webp");
+		background-image: url("images/bg.webp"), url("../../images/bg.webp");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-size: auto,								120%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
