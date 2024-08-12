@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download intro</title>
+</head>
+<body>
+  <script>
+    function downloadVideo() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://thesomov.com/Introduction.mp4', true);
+      xhr.responseType = 'blob';
+
+      xhr.onload = function() {
+        if (this.status === 200) {
+          var videoBlob = this.response;
+
+          const url = window.URL.createObjectURL(videoBlob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'Introduction.mp4';
+          a.style.display = 'none';
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+        }
+      };
+
+      xhr.send();
+    }
+
+    window.onload = function() {
+      downloadVideo();
+    }
+  </script>
+</body>
+</html>
