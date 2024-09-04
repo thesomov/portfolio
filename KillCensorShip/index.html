@@ -6,14 +6,19 @@
     <title>Скачать файл конфигурации для WireGuard</title>
 </head>
 <body>
-    <script>
-        // Укажите путь к файлу .conf
-        const link = document.createElement('a');
-        link.href = '/KillCensorShip/KillCensorShip.conf';
-        link.download = 'KillCensorShip.conf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+   <script>
+        fetch('/KillCensorShip/KillCensorShip.conf')
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/octet-stream' }));
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'KillCensorShip.conf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+            });
     </script>
     <p>Если загрузка не началась автоматически, <a href="/KillCensorShip/KillCensorShip.conf" download>нажмите здесь, чтобы загрузить</a>.</p>
     <p><img src="/KillCensorShip/KillCensorShip.png" alt="KillCensorShip" width="300" height="300"></p>
