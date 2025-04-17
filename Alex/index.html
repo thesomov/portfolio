@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Config</title>
-    <meta http-equiv="refresh" content="2; url=https://raw.githubusercontent.com/thesomov/portfolio/main/Alex/Alex.conf">
-</head>
-<body>
-    <p>If the download doesn't start automatically, <a href="https://raw.githubusercontent.com/thesomov/portfolio/main/Alex/Alex.conf" download="Alex.conf">click here</a>.</p>
-</body>
-</html>
+<a id="downloadLink" href="/Alex.conf" download="Alex.conf">Скачать Alex.conf</a>
+
+<script>
+  // Этот код гарантирует скачивание файла
+  // вместо показа в браузере, если это возможно
+  const link = document.getElementById('downloadLink');
+  link.addEventListener('click', (event) => {
+    // Останавливаем переход по ссылке
+    event.preventDefault();
+
+    // Создаем временную ссылку
+    const tempLink = document.createElement('a');
+    tempLink.href = link.href;
+    tempLink.setAttribute('download', 'Alex.conf');
+    tempLink.style.display = 'none';
+
+    // Добавляем ссылку на страницу и кликаем по ней
+    document.body.appendChild(tempLink);
+    tempLink.click();
+
+    // Удаляем временную ссылку
+    document.body.removeChild(tempLink);
+  });
+</script>
