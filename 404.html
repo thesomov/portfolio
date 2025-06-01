@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <title>Site Closed</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script>
-        window.location.replace("/");
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, sans-serif;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .closure-message {
             text-align: center;
-            margin: 50px;
-            padding: 20px;
+            margin-top: 20vh;
+        }
+        h1 {
+            font-size: 1.5em; /* 20% больше чем было 1.25em */
+            font-weight: bold;
+            margin: 0 0 1.3em 0;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 1.16em; /* 20% больше чем было 0.97em */
+            margin: 1.1em 0 0.4em 0;
+            line-height: 1.4;
+        }
+        a {
+            color: #4B1899;
+            text-decoration: underline;
+            font-weight: 500;
+            font-size: 1.16em; /* тоже увеличим */
+        }
+        @media (max-width: 600px) {
+            .closure-message {
+                margin-top: 24px;
+                padding: 0 2vw;
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+            p, a {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>This site is no longer active.</h1>
-    <p>The portfolio of Andrew Somov is available here: 
-        <a href="https://www.behance.net/its-somov" target="_blank">Behance</a>.
-    </p>
-    <p>If you want to contact Andrew Somov: 
-        <a href="https://www.linkedin.com/in/its-somov" target="_blank">LinkedIn</a>.
-    </p>
+    <div class="closure-message">
+        <h1>This site is no longer active.</h1>
+        <p>
+            The portfolio of Andrew Somov is available here: <a href="https://www.behance.net/its-somov" target="_blank">Behance</a>.
+        </p>
+        <p>
+            If you want to contact Andrew Somov: <a href="https://www.linkedin.com/in/its-somov" target="_blank">LinkedIn</a>.
+        </p>
+    </div>
 </body>
 </html>
