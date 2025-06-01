@@ -6,32 +6,33 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            background: #fff;
+            justify-content: flex-end;
+            align-items: center;
         }
-        .wrapper {
-            padding: 32px 20px;
-            max-width: 500px;
-            margin: 0 auto;
+        .closure-message {
+            margin-bottom: 8vh;
+            text-align: center;
         }
         h1 {
-            font-size: 2em;
-            font-weight: 700;
-            margin-bottom: 1.2em;
-            margin-top: 0;
-            line-height: 1.15;
+            font-size: 1.7em;
+            font-weight: bold;
+            margin: 0 0 1.3em 0;
+            line-height: 1.2;
         }
         p {
             font-size: 1.1em;
-            margin: 1.3em 0 0.7em 0;
+            margin: 1.1em 0 0.4em 0;
             line-height: 1.4;
         }
         a {
@@ -40,24 +41,24 @@
             font-weight: 500;
         }
         @media (max-width: 600px) {
-            .wrapper {
-                padding: 18vw 4vw 10vw 4vw;
-                max-width: 100vw;
+            .closure-message {
+                margin-bottom: 6vh;
+                padding: 0 2vw;
             }
             h1 {
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
             p {
-                font-size: 1em;
+                font-size: 0.97em;
             }
             a {
-                font-size: 1em;
+                font-size: 0.97em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="closure-message">
         <h1>This site is no<br>longer active.</h1>
         <p>
             The portfolio of Andrew Somov<br>
